@@ -9,8 +9,6 @@ import (
 type (
 	ItemType  int
 	ValueType int
-	DataType  int
-	DeltaType int
 )
 
 const (
@@ -38,14 +36,6 @@ const (
 	Unsigned  ValueType = 3
 	Text      ValueType = 4
 
-	Decimal     DataType = 0
-	Octal       DataType = 1
-	Hexadecimal DataType = 2
-	Boolean     DataType = 3
-
-	AsIs  DeltaType = 0
-	Speed DeltaType = 1
-	Delta DeltaType = 2
 )
 
 // https://www.zabbix.com/documentation/2.2/manual/appendix/api/item/definitions
@@ -58,10 +48,7 @@ type Item struct {
 	Name         string    `json:"name"`
 	Type         ItemType  `json:"type"`
 	ValueType    ValueType `json:"value_type"`
-	DataType     DataType  `json:"data_type"`
-	Delta        DeltaType `json:"delta"`
 	Description  string    `json:"description"`
-	Error        string    `json:"error"`
 	History      string    `json:"history,omitempty"`
 	Trends       string    `json:"trends,omitempty"`
 	TrapperHosts string    `json:"trapper_hosts,omitempty"`
