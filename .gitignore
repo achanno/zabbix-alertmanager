@@ -1,3 +1,4 @@
 /cmd/zal/zal
 /zal
 bin/golangci-lint
+bin/

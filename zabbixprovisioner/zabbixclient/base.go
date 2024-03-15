@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"github.com/hashicorp/go-version"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -138,8 +139,26 @@ func (api *API) CallWithError(method string, params interface{}) (Response, erro
 
 // Calls "user.login" API method and fills api.Auth field.
 // This method modifies API structure and should not be called concurrently with other methods.
-func (api *API) Login(user, password string) (string, error) {
-	params := map[string]string{"user": user, "password": password}
+func (api *API) Login(user, password string, zabbixversion string) (string, error) {
+	v1, err := version.NewVersion("5.4")
+	if err != nil {
+		return "", err
+	}
+
+	v2, err := version.NewVersion(zabbixversion)
+	if err != nil {
+		return "", err
+	}
+
+	params := make(map[string]string)
+	params["password"] = password
+
+	if v2.LessThan(v1) {
+		params["user"] = user
+	} else {
+		params["username"] = user
+	}
+
 	response, err := api.CallWithError("user.login", params)
 	if err != nil {
 		return "", err

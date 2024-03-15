@@ -41,7 +41,12 @@ func New(prometheusUrl, keyPrefix, url, user, password string, hosts []HostConfi
 		Transport: transport,
 	})
 
-	_, err := api.Login(user, password)
+	zabbixversion, err := api.Version()
+
+    if err != nil {
+        return nil, errors.Wrap(err, "error getting version from zabbix api")
+    }
+	_, err = api.Login(user, password, zabbixversion)
 	if err != nil {
 		return nil, errors.Wrap(err, "error while login to zabbix api")
 	}
