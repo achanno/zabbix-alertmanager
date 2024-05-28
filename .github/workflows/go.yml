@@ -28,7 +28,7 @@ jobs:
       run: go test -v ./...
 
     - name: List files
-      run: find
+      run: find /
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
