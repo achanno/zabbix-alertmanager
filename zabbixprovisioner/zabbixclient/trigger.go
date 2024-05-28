@@ -1,7 +1,7 @@
 package zabbix
 
 import (
-	reflector "github.com/Dexanir/zabbix-alertmanager/zabbixprovisioner/zabbixutil"
+	reflector "github.com/achanno/zabbix-alertmanager/zabbixprovisioner/zabbixutil"
 )
 
 type (

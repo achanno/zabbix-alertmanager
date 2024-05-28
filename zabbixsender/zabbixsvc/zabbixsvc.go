@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Dexanir/zabbix-alertmanager/zabbixsender/zabbixsnd"
+	"github.com/achanno/zabbix-alertmanager/zabbixsender/zabbixsnd"
 	"github.com/pkg/errors"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"

@@ -8,9 +8,9 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/Dexanir/zabbix-alertmanager/zabbixprovisioner/provisioner"
-	"github.com/Dexanir/zabbix-alertmanager/zabbixsender/zabbixsnd"
-	"github.com/Dexanir/zabbix-alertmanager/zabbixsender/zabbixsvc"
+	"github.com/achanno/zabbix-alertmanager/zabbixprovisioner/provisioner"
+	"github.com/achanno/zabbix-alertmanager/zabbixsender/zabbixsnd"
+	"github.com/achanno/zabbix-alertmanager/zabbixsender/zabbixsvc"
 	"github.com/povilasv/prommod"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"

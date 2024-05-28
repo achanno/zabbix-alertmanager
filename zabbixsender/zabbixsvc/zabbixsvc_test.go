@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Dexanir/zabbix-alertmanager/zabbixsender/zabbixsnd"
-	"github.com/Dexanir/zabbix-alertmanager/zabbixsender/zabbixsvc"
+	"github.com/achanno/zabbix-alertmanager/zabbixsender/zabbixsnd"
+	"github.com/achanno/zabbix-alertmanager/zabbixsender/zabbixsvc"
 	log "github.com/sirupsen/logrus"
 )
 
