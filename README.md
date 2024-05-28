@@ -96,4 +96,5 @@ Example of the alert's configuration is [here](./alerts.yaml)
 
 Original repository: https://github.com/devopyio/zabbix-alertmanager
 Source for this: https://github.com/achanno/zabbix-alertmanager 
+Also used: https://github.com/Dexanir/zabbix-alertmanager
 tested against zabbix 6.4 
