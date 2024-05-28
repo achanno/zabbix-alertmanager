@@ -29,6 +29,7 @@ jobs:
 
     - name: Release
       uses: softprops/action-gh-release@v1
+      tag_name: v2.0.1
       with:
         files: |
           zal
