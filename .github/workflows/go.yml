@@ -22,7 +22,7 @@ jobs:
         go-version: '1.20'
 
     - name: Build
-      run: go build -o zal -v ./...
+      run: go build -v ./...
 
     - name: Test
       run: go test -v ./...
@@ -31,4 +31,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: zal
-        path: zal
+        path: bin/zal
